@@ -17,9 +17,14 @@
         }
 
         /* Membuat tabel berada di tengah */
-        table {
-            width: 70%;
+        .tabel-container {
+            width: 80%;
             margin: auto;
+            overflow-x: auto; /* Memungkinkan scroll horizontal jika tabel terlalu lebar */
+        }
+
+        table {
+            width: 100%;
             border-collapse: collapse;
             background-color: #f9f9f9;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -36,23 +41,22 @@
             color: white;
         }
 
-        /* Responsif: Untuk layar kecil */
+        /* Responsif: Pastikan tabel bisa di-scroll di layar kecil */
         @media screen and (max-width: 768px) {
-            table {
-                width: 95%;
-                display: block;
-            }
-            
-            th, td {
-                display: block;
+            .tabel-container {
                 width: 100%;
-                text-align: center;
+                padding: 10px;
+            }
+
+            table {
+                width: 100%;
+                min-width: 600px; /* Mencegah tabel mengecil di layar kecil */
             }
         }
 
         /* Gambar responsif */
         img {
-            max-width: 100%;
+            max-width: 50px;
             height: auto;
             display: block;
             margin: auto;
@@ -63,60 +67,62 @@
 
     <h2>Biodata Saya</h2>
 
-    <table>
-        <tr>
-            <th>Informasi</th>
-            <th>Detail</th>
-        </tr>
-        <tr>
-            <td>Nama</td>
-            <td>Yosua Tambunan</td>
-        </tr>
-        <tr>
-            <td>Tempat, Tanggal Lahir</td>
-            <td>Medan, 2 Mei 2005</td>
-        </tr>
-        <tr>
-            <td>Alamat</td>
-            <td>Jln. Pintu Air IV</td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td>tambunanyosua29@gmail.com</td>
-        </tr>
-        <tr>
-            <td>Nomor Telepon</td>
-            <td>085376242580</td>
-        </tr>
-        <tr>
-            <td>Jenis Kelamin</td>
-            <td>Laki-Laki</td>
-        </tr>
-        <tr>
-            <td>Prodi</td>
-            <td>Teknik Informatika</td>
-        </tr>
-        <tr>
-            <td>Anime Favorit</td>
-            <td>Attack on Titan / Shingeki no Kyojin</td>
-        </tr>
-        <tr>
-            <td>Instagram</td>
-            <td>
-                <a href="https://www.instagram.com/yossuua?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="50">
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td>Facebook</td>
-            <td>
-                <a href="https://www.facebook.com/yosua.tambunan.351?locale=id_ID" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="50">
-                </a>
-            </td>
-        </tr>
-    </table>
+    <div class="tabel-container">
+        <table>
+            <tr>
+                <th>Informasi</th>
+                <th>Detail</th>
+            </tr>
+            <tr>
+                <td>Nama</td>
+                <td>Yosua Tambunan</td>
+            </tr>
+            <tr>
+                <td>Tempat, Tanggal Lahir</td>
+                <td>Medan, 2 Mei 2005</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>Jln. Pintu Air IV</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>tambunanyosua29@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Nomor Telepon</td>
+                <td>085376242580</td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>Laki-Laki</td>
+            </tr>
+            <tr>
+                <td>Prodi</td>
+                <td>Teknik Informatika</td>
+            </tr>
+            <tr>
+                <td>Anime Favorit</td>
+                <td>Attack on Titan / Shingeki no Kyojin</td>
+            </tr>
+            <tr>
+                <td>Instagram</td>
+                <td>
+                    <a href="https://www.instagram.com/yossuua?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Facebook</td>
+                <td>
+                    <a href="https://www.facebook.com/yosua.tambunan.351?locale=id_ID" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
 
 </body>
 </html>
