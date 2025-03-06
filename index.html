@@ -3,6 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    table {
+        width: 100%; 
+        border-collapse: collapse; 
+    }
+
+    td {
+        text-align: center;
+        padding: 10px; 
+    }
+    /* Responsif untuk layar ukuran kecil */
+    @media (max-width: 768px) {
+        table {
+            display: block; /* Bikin tabel jadi block biar fleksibel */
+            width: 100%; 
+        }
+        tr {
+            display: block;
+            margin-bottom: 10px;
+        }
+        td {
+            display: block;
+            width: 100%; /* Bikin semua kolom jadi full di mobile */
+            text-align: center;
+            padding: 15px;
+        }
+    }
+</style>
     <title>BiodataKU</title>
      <link rel="stylesheet" href="rgb.css">
   </head>
